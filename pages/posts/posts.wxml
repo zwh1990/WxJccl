@@ -1,0 +1,41 @@
+<view>
+  <swiper interval="1500" circular="{{true}}" indicator-dots="{{true}}" autoplay="{{true}}">
+    <swiper-item>
+      <image src="/images/avatar/1.jpg">
+      </image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/avatar/2.jpg">
+      </image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/avatar/3.jpg">
+      </image>
+    </swiper-item>
+  </swiper>
+
+  <block wx:for="{{postList}}" wx:key="index">
+    <view bind:tap = "onGoToDetail" class="post-container">
+      <view class="post-author-date">
+        <image class="post-author" src="{{item.author}}">
+        </image>
+        <text wx:if="{{item.flag}}" class="post-date">{{item.date}}</text>
+      </view>
+
+      <text class="post-title">{{item.title}}</text>
+
+      <image class="post-image" src="{{item.image}}"></image>
+
+      <text class="post-content">{{item.content}}</text>
+
+      <view class="post-like">
+        <l-icon class="post-like-image" color="#666" size="28" name="favor" />
+        <text class="post-like-font">{{item.number.favor}}</text>
+        <l-icon class="post-like-image" color="#666" size="32" name="eye" />
+        <text class="post-like-font">{{item.number.look}}</text>
+      </view>
+
+    </view>
+  </block>
+
+</view>

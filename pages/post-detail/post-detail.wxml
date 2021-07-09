@@ -1,0 +1,14 @@
+<view class="container">
+  <image src= "/images/avatar/1.jpg"></image>
+  <view>
+    <image src="/images/avatar/head.png"></image>
+    <text>zwh</text>
+    <text>发表于</text>
+    <text>1小时前</text>
+  </view>
+  <text>2021年样品展示</text>
+  <view>
+    <image src="/images/avatar/share.png"></image>
+  </view>
+  <text>服装样品是指能够代表服装品质的实物。服装样品代表着服装这一商品的具体实样，是服装生产的标准。用它来确定批量服装的外观造型、品质质地、视觉色彩、结构工艺等内容。</text>
+</view>
