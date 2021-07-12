@@ -16,14 +16,25 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    wx.setStorageSync('flag', true)
+    wx.setStorageSync('flag', false)
+    // wx.clearStorageSync()
+    // wx.removeStorageSync('flag')
+    const flag = wx.getStorageSync('flag')
+    console.log(flag)
+
     this.setData({
       postList
     })
   },
 
   onGoToDetail(event){
+    console.log(event)
+    const pid = event.currentTarget.dataset.postId
+    console.log(pid)
     wx.navigateTo({
-      url: '/pages/post-detail/post-detail',
+      url: '/pages/post-detail/post-detail?pid='+ pid,
     })
   },
 

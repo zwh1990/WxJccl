@@ -15,7 +15,7 @@
   </swiper>
 
   <block wx:for="{{postList}}" wx:key="index">
-    <view bind:tap = "onGoToDetail" class="post-container">
+    <view data-post-id = "{{item.postId}}"bind:tap = "onGoToDetail" class="post-container">
       <view class="post-author-date">
         <image class="post-author" src="{{item.author}}">
         </image>

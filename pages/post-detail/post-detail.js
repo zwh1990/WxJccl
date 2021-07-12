@@ -1,4 +1,5 @@
-// pages/post-detail/post-detail.js
+import {postList} from '../../data/data.js'
+
 Page({
 
   /**
@@ -12,7 +13,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options)
+    const data= postList[options.pid]
+    console.log(data);
+    this.setData({
+      data
+    })
   },
 
   /**
